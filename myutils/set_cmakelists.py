@@ -13,4 +13,5 @@ template = env.get_template('CMakeLists.tpl.txt')
 data = {"contest_id": contest_id, "problems": problems}
 
 rendered = template.render(data)
-print(str(rendered))
+with open('CMakeLists.txt', 'w') as f:
+    f.write(rendered)
