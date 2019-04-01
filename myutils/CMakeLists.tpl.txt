@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.6)
+project({{ contest_id }})
+{% for problem in problems %}
+add_executable({{ problem }} {{ problem }}/main.cpp)
+{% endfor %}
